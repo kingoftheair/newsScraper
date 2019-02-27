@@ -1,0 +1,126 @@
+body {
+    background-color: #323232;
+    font-family: "Karla", sans-serif;
+  }
+  
+  h1 {
+    text-decoration: underline;
+  }
+  
+  .card {
+    min-height: 320px;
+    position: relative;
+  }
+  
+  .card:hover {
+    background-color: #3949ab !important;
+  }
+  .card-content {
+    height: 180px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem !important;
+    line-height: 1.4rem !important;
+  }
+  
+  .comment_button {
+    position: relative;
+    bottom: -6rem;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+  }
+  
+  .info_link {
+    margin-top: 0.66rem;
+  }
+  .modal {
+    background-color: #ede5d3;
+    text-align: left;
+    width: 35%;
+    min-height: 30%;
+    border: 5px solid black;
+    border-radius: 15px;
+  }
+  
+  .modal-footer {
+    background-color: #ede5d3 !important;
+  }
+  
+  .btn:hover {
+    background-color: #1976d2 !important;
+  }
+  
+  .user_comment {
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  #summary {
+    font-style: italic;
+  }
+  
+  .delete-comment {
+    margin-bottom: 1rem;
+  }
+  
+  input:focus {
+    border-bottom: 1px solid #7986cb !important;
+    -webkit-box-shadow: 0 1px 0 0 red !important;
+    -moz-box-shadow: 0 1px 0 0 red !important;
+    box-shadow: 0 1px 0 0 #7986cb !important;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .modal {
+      width: 80%;
+      height: 500px;
+    }
+  
+    h5 {
+      font-size: 1rem;
+    }
+  
+    h6 {
+      font-size: 1rem;
+    }
+  
+    .user_comment {
+      font-size: 1rem;
+      line-height: 0.3rem;
+    }
+    .card-title {
+      font-size: 2rem !important;
+      line-height: 1.5rem !important;
+    }
+  
+    .card {
+      min-height: 290px;
+    }
+  }
+  
+  @media only screen and (max-width: 980px) {
+    .modal {
+      width: 80%;
+    }
+  
+    .card-title {
+      font-size: 1.5rem !important;
+      line-height: 1.5rem !important;
+      font-weight: 900;
+    }
+  
+    .card {
+      min-height: 330px;
+    }
+  
+    .comment_button {
+      position: relative;
+      bottom: -7.5rem;
+    }
+  }

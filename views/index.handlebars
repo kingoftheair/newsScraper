@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="heading">
+        <h1>mixmag scraper</h1>
+        <a href="/scrape" class="btn waves-effect waves-purple indigo darken-1">SCRAPE NEW ARTICLES</a>
+    </div>
+    
+    <div class="row">
+        {{#each result}}
+        <div class="col l4 m6 s12">
+            <div class="card indigo darken-2">
+                <div class="card-content white-text">
+                    <span class="card-title">{{this.title}}</span>
+                    <p id="summary">{{this.summary}}.</p>
+                    <div class="info_link">
+                        <p>Read more:</p>
+                        <a href="{{this.link}}" target="_blank">{{this.link}}</a>
+                    </div>
+                </div>
+
+                <div class="comment_button center-align">
+                    <a class="waves-effect waves-purple btn modal-trigger open-comment blue accent-3"
+                        data-id="{{this.id}}" href="#modal{{this.id}}">Comments
+                        {{#if this.comments.comment}}{{#each this.comments}}{{this.length}}{{/each}}{{/if}}{{#unless this.comments.comment}}0{{/unless}}</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Modal Structure -->
+        <div id="modal{{this.id}}" class="modal" data-id="{{this.id}}">
+            <div class="modal-content">
+                <h5 class="center-align">{{this.title}}</h5><br />
+
+                <h6>Comments:</h6>
+                {{#each this.comments.comment}}
+                {{#if body}}
+                <div id="comments">
+                    <span class="user_comment">{{body}}</span><a
+                        class="delete-comment waves-effect waves-purple btn-small red accent-3" data-id="{{_id}}"
+                        data-article="{{../this.id}}">X</a>
+                </div>
+                {{/if}}
+                {{/each}}
+
+                <form onsubmit="return false"><br />
+                    <h6>Add Comment:</h6>
+                    <input type="text" id="userComment" />
+            </div>
+            <div class="modal-footer">
+
+                <a class="save-comment waves-effect waves-purple btn blue accent-3" data-id="{{this.id}}">Save
+                    Comment</a>
+                </form>
+            </div>
+        </div>
+
+
+        {{/each}}
+    </div>
+</div>
+</div>
